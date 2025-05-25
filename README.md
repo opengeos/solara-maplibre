@@ -1,12 +1,12 @@
 ---
-title: Solara Template
-emoji: 🏃
-colorFrom: blue
-colorTo: green
+title: Solara MapLibre
+emoji: 📚
+colorFrom: green
+colorTo: yellow
 sdk: docker
 pinned: false
 license: mit
-app_port: 8765
+short_description: A solara web app template for MapLibre
 ---
 
 Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
