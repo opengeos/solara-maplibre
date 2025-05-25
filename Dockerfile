@@ -6,9 +6,9 @@ RUN pip install -r requirements.txt
 RUN mkdir ./pages
 COPY /pages ./pages
 
-USER root
-RUN chown -R ${NB_UID} ${HOME}
-USER ${NB_USER}
+# USER root
+# RUN chown -R ${NB_UID} ${HOME}
+# USER ${NB_USER}
 
 EXPOSE 8765
 
