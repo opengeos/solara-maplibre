@@ -9,8 +9,8 @@ COPY /pages ./pages
 WORKDIR /home/jovyan
 USER jovyan
 
-EXPOSE 8765
+EXPOSE 8080
 
 HEALTHCHECK CMD curl --fail http://localhost:8765/_stcore/health
 
-ENTRYPOINT ["solara", "run", "./pages", "--host=0.0.0.0", "--port=8765"]
+ENTRYPOINT ["solara", "run", "./pages", "--host=0.0.0.0", "--port=8080"]
