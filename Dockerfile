@@ -1,4 +1,4 @@
-FROM quay.io/jupyter/base-notebook:latest
+FROM python:3.12-slim
 
 COPY requirements.txt .
 RUN pip install -r requirements.txt
@@ -14,4 +14,4 @@ EXPOSE 8765
 
 HEALTHCHECK CMD curl --fail http://localhost:8765/_stcore/health
 
-ENTRYPOINT ["solara", "run", "./pages", "--server.port=8765", "--server.address=0.0.0.0"]
+ENTRYPOINT ["solara", "run", "./pages", "--host=0.0.0.0"]
