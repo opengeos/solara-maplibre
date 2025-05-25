@@ -1,4 +1,4 @@
-FROM python:3.12-slim
+FROM quay.io/jupyter/base-notebook:latest
 
 COPY requirements.txt .
 RUN pip install -r requirements.txt
@@ -6,9 +6,8 @@ RUN pip install -r requirements.txt
 RUN mkdir ./pages
 COPY /pages ./pages
 
-# USER root
-# RUN chown -R ${NB_UID} ${HOME}
-# USER ${NB_USER}
+WORKDIR /home/jovyan
+USER jovyan
 
 EXPOSE 8765
 
