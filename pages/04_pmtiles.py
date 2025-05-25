@@ -1,5 +1,4 @@
 import solara
-import reacton.ipyvuetify as rv
 import leafmap.maplibregl as leafmap
 
 
@@ -11,8 +10,8 @@ def create_map():
         height="750px",
         center=[-100, 40],
         zoom=4,
+        sidebar_visible=True,
     )
-    m.create_container(sidebar_visible=True)
 
     building_pmtiles = "https://overturemaps-tiles-us-west-2-beta.s3.amazonaws.com/2025-04-23/buildings.pmtiles"
     road_pmtiles = "https://overturemaps-tiles-us-west-2-beta.s3.amazonaws.com/2025-04-23/transportation.pmtiles"
@@ -54,5 +53,4 @@ def create_map():
 @solara.component
 def Page():
     m = create_map()
-    container = rv.Row(children=[m.container])
-    return container
+    return m.to_solara()

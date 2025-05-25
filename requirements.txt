@@ -1,4 +1,4 @@
 geopandas
-leafmap>=0.46.6
+leafmap>=0.46.7
 maplibre
 solara
