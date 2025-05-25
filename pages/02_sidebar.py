@@ -5,7 +5,7 @@ import leafmap.maplibregl as leafmap
 
 def create_map():
 
-    m = leafmap.Map(style="dark-matter", projection="globe", height="750px")
+    m = leafmap.Map(style="dark-matter", projection="globe", height="750px", zoom=2.5)
     m.create_container(sidebar_visible=True)
 
     m.add_ee_layer(asset_id="ESA/WorldCover/v200", opacity=0.8)
