@@ -5,7 +5,7 @@ import leafmap.maplibregl as leafmap
 
 def create_map():
 
-    m = leafmap.Map(style="liberty", projection="globe")
+    m = leafmap.Map(style="liberty", projection="globe", sidebar_visible=True)
     m.creater_container()
     return m
 
