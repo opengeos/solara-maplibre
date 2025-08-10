@@ -14,7 +14,10 @@ def create_map():
     images = df["url"].to_list()
 
     m = leafmap.Map(
-        projection="globe", sidebar_visible=True, layer_manager_expanded=False
+        projection="globe",
+        height="750px",
+        sidebar_visible=True,
+        layer_manager_expanded=False,
     )
     m.add_basemap("USGS.Imagery")
     vmin = -0.02
